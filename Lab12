@@ -1,0 +1,15 @@
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${HOMEPAGE}    http://www.google.com
+${BROWSER}    Chrome
+
+
+*** Test Cases ***
+Open Lab12 Problem Page
+Go To GHomepage
+    Open Browser    ${HOMEPAGE}    ${BROWSER}   
+	Input Text    q    http://www.cs.kku.ac.th
+	submit Form    tsf
+    [Teardown]    Close BROWSER
